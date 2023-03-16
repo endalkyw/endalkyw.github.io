@@ -1,0 +1,30 @@
+.container
+{
+    width:77%;
+    margin-right: auto;
+    margin-left: auto;
+    *zoom: 1;
+}
+
+
+@media(max-width:979px) {
+    body {
+        padding-top: 0
+    }
+}
+
+@media(min-width:768px) and (max-width:979px) {
+    .container {
+        width: 724px
+    }
+}
+
+@media(max-width:767px) {
+    body {
+        padding-right: 20px;
+        padding-left: 20px
+    }
+    .container {
+        width: auto
+    }
+}

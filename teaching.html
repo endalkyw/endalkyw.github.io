@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>Teaching</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Research Lab, Teaching, McGill University Timber Structures Group">
+      <meta name="author" content="Matiyas Bezabeh">
+
+      <!-- styles -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link href="css/layout.css" rel="stylesheet">
+      <link href="css/responsive.css" rel="stylesheet">
+      <link href="css/main.css" rel="stylesheet" >
+
+   </head>
+   <body>
+      <div class="container">
+         <div class = "label">
+            <div class = "label_">
+               <img src="images/img/McGill Logo.png" class="mcgill-logo"/>
+               <p>McGill Timber Structures Group <br> <span>McGill-TSG</span></p>               
+            </div>
+          </div>
+   
+         <div class="navbar">
+            <div class="tsg_logo">
+               <img src="images/img/McGill Logo.png"/>
+               <span>McGill-TSG</span>
+            </div>
+            <ul class="navlst">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="publications.html">Publication</a></li>
+                <li><a href="#"  class="active">Teaching</a></li>
+                <li><a href="people.html">People</a></li>
+                <li><a href="photos.html">Photos</a></li>
+                <li><a href="news.html">News</a></li>
+            </ul>
+            <a href="#" class="m_butt"><i class="fa-sharp fa-solid fa-bars fa-2xl"></i></a>
+          </div>
+
+         <div class="lr_div">
+            <div class="l_div">
+               <ul class = "nav_ul_1">
+                    <li><a href="#statemet"> <h4>Courses </h4></a></li>
+                    <li>
+                     <ul class = "nav_ul_2">
+                        <li class="nav_li active"><a href="#ECE342"> <b>CIVE 205:</b> Statics</a></li>
+                        <li class="nav_li"><a href="#ECE421"> <b>CIVE 628:</b> Advanced Design of Wood Buildings</a></li>
+                        <li class="nav_li"><a href="#CIVE540"> <b>CIVE 5XX:</b> Wind Engineering</a></li>
+                     </ul>
+                    </li>
+               </ul>
+            </div>
+            <div class="r_div">
+               <section id="statemet">
+                  <div class="page-header">
+                     <h3>Courses</h3>
+                     <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                     </p>
+                  </div>
+               </section>
+               <section  class = "nav_sec" id="ECE342">
+                  <div class="page-header">
+                     <h4><a href="">CIVE 205 - Statics</a></h4>
+                     <hr>
+                     <p>Quam viverra orci sagittis eu volutpat odio. Ultricies tristique nulla aliquet enim tortor at auctor urna nunc. </p>
+                     <p><b>Prerequisite: </b><a href=""><b>ME 310</b></a> and <a href=""><b>ME 320</b></a>.</p>
+                     <p><b>Semesters Taught:</b> Fall 2018.</p>
+                     <p><b>Course Information:</b> <a href="">Syllabus</a></p>
+                  </div>
+               </section>
+               <section  class = "nav_sec" id="ECE421">
+                  <div class="page-header">
+                     <h4><a href="">CIVE 628 - Advanced Design of Wood Buildings</a></h4>
+                     <hr>
+                     <p>Morbi enim nunc faucibus a pellentesque sit amet porttitor eget. Aliquet bibendum enim facilisis gravida. </p>
+                     <p><b>Prerequisite:</b> Mus mauris vitae.</p>
+                     <p><b>Semesters Taught:</b> Fall 2018.</p>
+                  </div>
+               </section>
+               <section  class = "nav_sec" id="CIVE540">
+                  <div class="page-header">
+                     <h4><a href="">CIVE 5XX - Wind Engineering</a></h4>
+                     <hr>
+                     <p>Morbi enim nunc faucibus a pellentesque sit amet porttitor eget. Aliquet bibendum enim facilisis gravida. </p>
+                     <p><b>Prerequisite:</b> Mus mauris vitae.</p>
+                     <p><b>Semesters Taught:</b> Fall 2018.</p>
+                  </div>
+            </div>
+         </div>
+      </div>
+      <footer id="footer">
+         <div class="f_logo">
+            <h4>McGill-TSG</h4>
+         </div>
+         <div class="f_add">
+               <h6>Matiyas A. Bezabeh</h6>
+               <p><b>Office Hours: </b>Monday-Friday (8.00am - 5.00pm) 
+               <b>Phone: </b>999-999-9999 <br>
+               <a href="mailto:your.email@uni.edu">Email</a>
+            </p>
+         </div>
+         <div class="f_cont">
+               <p>
+                  817 Sherbrooke Street West, 
+                  Macdonald Engineering Building 
+                  Room 475B,<br>
+                  <a href="http://maps.google.com/">Show Map</a>
+               </p>
+         </div>
+      </footer>
+
+      <!-- Le javascript
+         ================================================== -->
+      <!-- Placed at the end of the document so the pages load faster -->
+      <script src="js/jquery-1.9.1.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/resp.js"></script>
+
+      <script>
+         $(document).ready(function() {
+             $(document.body).scrollspy({
+                 target: "#navparent"
+             });
+         });
+         
+      </script>
+   </body>
+</html>
