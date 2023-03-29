@@ -12,11 +12,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
+    - name: Checkout ./code/
       uses: actions/checkout@v2
       with: 
         path: code
-    - name: Checkout site
+    - name: Checkout endalkyw.github.io
       uses: actions/checkout@v2
       with: 
         token: ${{ secrets.MY_TOKEN }}
