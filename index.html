@@ -2,6 +2,7 @@
 <html>
 <head>
 <link href="main.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 <title>Page Title</title>
 </head>
@@ -23,12 +24,25 @@
         </div>
 
         <div class="dis">
-        <p>Endalkachew Y Gebru</p>
+        <b>Endalkachew Y Gebru</b>
         <p>MN, United States</p>
         <p>endalkyw@gmail.com</p>
         <p>gebru009@umn.edu</p>
         
         </div>
+
+        <div class="contact-icons">
+          <a href="tel:+1234567890" class="contact-icon" title="Phone">
+            <i class="fas fa-phone"></i>
+          </a>
+          <a href="mailto:email@example.com" class="contact-icon" title="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="https://github.com/yourusername" target="_blank" class="contact-icon" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+
     </div>
     
 
@@ -37,62 +51,134 @@
             <h4>ABOUT ME</h4>
             <p class="desc">
             <p>
-                I'm a PhD student at UC San Diego, specializing in analog/digital IC design automation and optimization. 
-                My research integrates machine learning, simulation feedback, and advanced methodologies like the gm/Id 
-                approach to enhance circuit design efficiency.
+              I am Endalk, a second-year PhD student at the University of Minnesota. 
+              My research lies at the intersection of Circuits and Systems,
+              
+              <span style="color:#7A0019;font-weight: bold;">Electronic Design Automation (EDA)</span>
+              ,and Computer-Aided Design (CAD). Currently, 
+              I am focusing on bridging the gap between Analog Integrated Circuit 
+              design and automation, leveraging 
+              <span style="color:#7A0019;font-weight: bold;">machine learning techniques</span>
+
+              to enhance the design process.
             </p>
-            <p> <b>Research Interests:</b>
-            Electronic Design Automation (EDA), Circuist and Systems,
-            Analog Circuits and Mixed Signal IC Design</p>
         </div>
 
         <div class = education>
-            <h4>EDUCATION</h4>
+
+          <div class="edu">
+            <h4>Education</h4>
             <div class = "edu_div">
                 <div class = "edu_logo">
-                    <img src="images/umn_logo.svg" alt="Italian Trulli" style="width:120px;height:80px;">
+                    <!-- <img src="images/umn_logo.svg" alt="Italian Trulli" style="width:120px;height:80px;"> -->
                 </div>
                 <div class="edu_info">
-                    <b>University of Minnesota, Twin Cities</b>
-                    <p><em>PhD in Electrical and Computer Engineering, 2027</em></p>
-                    <p><em>Advisor:</em> Dr. Sachin Sapatnekar</p>
-                    <p><em>Coadvisor:</em> Dr. Ramesh Harjani</p>
-                    <p><strong>Relevant Courses:</strong> Analog IC Design, Design Automation, Variation Aware Computing, Machine Learning I</p>
-                </div>
-            </div>
+                    <b>PhD in Electrical and Computer Engineering, 2027</b>
+                    <p>University of Minnesota, Twin Cities</p>
+                    <p><b>Advisor:</b> Dr. Sachin Sapatnekar</p>
+                    <p><b>Coadvisor:</b> Dr. Ramesh Harjani</p>
+                    <!-- <p><strong>Relevant Courses:</strong> Analog IC Design, Design Automation, Variation Aware Computing, Machine Learning I</p> -->
+                <!-- </div> -->
+            <!-- </div>
         
         
-            <div class = "edu_div">
-                <div class = "edu_logo">
-                    <img src="images/AAU.png" alt="Italian Trulli" style="width:260px;height:40px;">
-                </div>
-                <div class="edu_info">
-                    <b>Addis Ababa University</b>
-                    <p><em>BSC in Electrical and Computer Engineering, 2022</em></p>
+        
+            <div class = "edu_div"> -->
+                <!-- <div class = "edu_logo"> -->
+                    <!-- <img src="images/AAU.png" alt="Italian Trulli" style="width:260px;height:40px;"> -->
+                <!-- </div> -->
+                <!-- <div class="edu_info"> -->
+                    <b>BSC in Electrical and Computer Engineering, 2022</b>
+                    <p>Addis Ababa University</p>
                     <p>Focus: Communications</p>
-                    <p> GPA: 4.00, 'Gold Medalist'</p> 
-                    <p>Thesis: Visible Light Communication</p> 
-                    <p><strong>Relevant Courses:</strong>Analog Electronics I & II, Digital Electronics, Computer Architecture, Communication Systems I & II, Control theory, EM waves and guided Structures, Antennas and Radio-wave propagation, Data Structures and Algorithms, Mobile and Wireless Communication, Microcomputers, and Interfacing etc.</p>
+                    <p>GPA: 4.00, 'Gold Medalist'</p> 
+                    <p><b>Thesis:</b> Visible Light Communication</p> 
+                    <!-- <p><strong>Relevant Courses:</strong>Analog Electronics I & II, Digital Electronics, Computer Architecture, Communication Systems I & II, Control theory, EM waves and guided Structures, Antennas and Radio-wave propagation, Data Structures and Algorithms, Mobile and Wireless Communication, Microcomputers, and Interfacing etc.</p> -->
                 </div>
             </div>
         
+          </div>
         
-        
+          <div class="res">
+            <h4>Research Interests</h4>
+            <ul>
+                <li>Electronic Design Automation (EDA)</li>
+                <li>Circuist and Systems</li>
+                <li>Analog Circuits and Mixed Signal IC Design</li>
+                <li>Machine Learning Techniques</li>
+
+            </ul>
+          </div>
         </div>
-
-
-
 
         <div class = projects>
-            <h4>PROJECTS</h4>
-            <p>dfdf</p>
-        </p>
+            <h4>PROJECTS</h4>              
+            <div class="project">
+              <h5>LUT Methodology for Analog Design and Parasitics Prediction using GF12 Node</h5>
+              <ul>
+                <li>Extending the gm/id method to FinFET technologies to predict parasitic dependency on transistor aspect ratios.</li>
+                <li>Contributing to predicting layout performance prior to layout design, potentially enhancing the capabilities of analog layout automation tools, specifically ALIGN, an open-source tool developed at UMN.</li>
+              </ul>
+            </div>
+              
+            <div class="project">
+              <h5>Hardware Security using Logic Locking</h5>
+              <ul>
+                <li>Investigating various hardware design-for-trust (DfTr) methods, particularly focusing on advancing research in logic locking techniques.</li>
+              </ul>
+            </div>
+              
+            <div class="project">
+              <h5>A CMOS Readout IC Design for Infrared Bolometer Image Sensor Application</h5>
+              <ul>
+                <li>Collaborating with Nanohmics Inc., involving circuit design and layout of a readout IC for an infrared bolometer image sensor, utilizing the Skywater130 PDK.</li>
+              </ul>
+            </div>
+              
+            <div class="project">
+              <h5>Low Power Fully Differential CMOS BIQUAD Filter Design for Hearing Aids</h5>
+              <ul>
+                <li>Developed as the final project for an Analog IC Design course.</li>
+              </ul>
+            </div>
+              
+            <div class="project">
+              <h5>FastPlace Algorithm Implementation</h5>
+              <ul>
+                <li>Developed and tested a C-based placer program utilizing the FastPlace Algorithm with IBM testbenches.</li>
+              </ul>
+            </div>
+            
+            <div class="project">
+              <h5>Static Time Analysis</h5>
+              <ul>
+                <li>Constructed a static time analysis framework in C++ to calculate total delay, slack, and critical path of digital circuits using NLDM models.</li>
+                <li>Validated the framework using various large testbench netlists.</li>
+              </ul>
+            </div>
+
+            <div class="project">
+                <h5>Simulated Annealing Based Floor Planning</h5>
+              <ul>
+                <li>Engineered and fine-tuned a simulated annealing engine specifically tailored for floor planning applications, optimizing its performance and effectiveness in layout design.</li>
+              </ul>
+            </div>
+
+            <div class="project">
+              <h5>14-bit Microprocessor Design and Simulation</h5>
+              <ul>
+                <li>Designed a 14-bit General Purpose Microprocessor with a Microprogrammed control unit and an 18-instruction set.</li>
+                <li>Tested the processor using Proteus, demonstrating capabilities in mathematical operations and simple I/O functionalities.</li>
+              </ul>
+            </div>
         </div>
+        
         <div class = skills>
             <h4>SKILLS</h4>
             <p>dfdf</p>
 
         </div>
+
         <div class = publication>
             <h4>PUBLICATIONS</h4>
             <p>dfdf</p>

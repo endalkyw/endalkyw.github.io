@@ -44,12 +44,15 @@ body {
 .profile {
     position: fixed;
     display:grid;
+    grid-template-rows: 1fr 1fr 0.8fr;
+    row-gap: 2;
     width: 250px;
     /* border-style:solid; */
     place-items: center;
-    height: 300px;
+    /* height: 300px; */
     margin-top:70px;
     z-index: 1000;
+    text-align: center;
 }
 
 
@@ -72,91 +75,132 @@ body {
 }
 .dis {
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    line-height: 0.6;   /* Adjust line spacing */
+    line-height: 0.3;   /* Adjust line spacing */
     margin: 0 auto;     /* Center the div if needed */
     padding: 10px;      /* Add some padding for a cleaner look */
     max-width: 95%;     /* Optional: Limit the width for readability */
     color:#555555;
-}
 
+    display:block;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
 
 
 
 .body_ {
     background-color: rgb(255, 255, 255);
     margin-left: 280px;
-    padding-top: 50px;
+    padding-top: 0px;
     display: grid;
-    grid-template-rows: 2fr 2fr 1fr 1fr 1fr;
+    grid-template-rows: 0.24fr 0.9fr 2.5fr 1fr 1fr;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color:rgb(71, 60, 60);
-
-    /* width:65%; */
-    /* border-style:solid; */
 }
 
 .body_ h4 {
-    background-color:#f7f7f7;
-    color: #000000;
-    padding:5px;
-    box-shadow: 1px 1px 1px gray;
+  font-weight:900;
+  color: #666666;
+    /* padding:5px; */
+    /* background-color:#f7f7f7; */
+    /* box-shadow: 1px 1px 1px gray; */
 }
 
-.about_me p {padding-left:20px; padding-right:20px;}
-
-.edu_div {
-	display:flex;
-    gap:0;
-	margin-bottom: 50px;
-	margin-left: 10px;
-}
-   
-.edu_logo img {
-    /* border-style:solid; */
-    max-width: 50%;
-	max-height:50%;
-    box-sizing: border-box;
-}
-   
-
-.edu_info {
-    /* border-style:solid; */
-    line-height: 1; /* Adjust line spacing */
-    margin: 0 auto; /* Center the div if needed */
-    padding: 10px; /* Add some padding for a cleaner look */
-    max-width: 95%; /* Optional: Limit the width for readability */
-  }
+.about_me p {
+  padding-left:0px; 
+  padding-right:20px;}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-  .abt_me {
-    color: #B2182B;
+.abt_me {
+    color:#00719c; 
     font-weight: bold;
+}
+
+
+/* ======== EDUCATION ======================================== */
+.education {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 250px;
+}
+
+.edu_div {display:flex; gap:0; margin-bottom: 50px; margin-left: 10px;}
+   
+.edu_logo img { max-width: 50%; max-height:50%; box-sizing: border-box;}
+
+.edu_info p{
+    font-size: 14px;
+    line-height:0.8ch;
+}
+
+
+
+
+.project {padding-left: 0px}
+
+.project ul {
+    padding-left: 20px;
+    list-style-type: disc;
+  }
+  
+  .project ul li {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555; /* Dark grey for text */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    #projects-section {
+      padding: 15px;
+    }
+  
+    .project {
+      padding: 10px;
+    }
+  
+    #projects-section h2 {
+      font-size: 24px;
+    }
+  
+    .project h3 {
+      font-size: 18px;
+    }
+  
+    .project ul li {
+      font-size: 14px;
+    }
   }
 
-  .edu {
 
+
+
+
+
+
+
+
+
+
+  .contact-icons {
+    display: flex;
+    justify-content: space-around; /* Adjusts space between icons */
+    align-items: center; /* Centers the icons vertically */
+    padding: 10px;
+    /* background-color: #f9f9f9; Light background for better visibility */
+    /* border: 1px solid #ccc; */
+    /* border-radius: 8px; */
   }
-
-  .prj {
-
+  
+  .contact-icon {
+    font-size: 24px; /* Adjust the icon size */
+    color: #333; /* Icon color */
+    margin: 0 10px; /* Add spacing between the icons */
+    text-decoration: none; /* Remove underline from links */
+    transition: transform 0.3s, color 0.3s; /* Add hover effect */
   }
-
-  .skl {
-
-  }
-
-  .pub {
-
+  
+  .contact-icon:hover {
+    transform: scale(1.2); /* Slight zoom-in effect on hover */
+    color: #007bff; /* Change icon color on hover */
   }
