@@ -1,15 +1,17 @@
+# Endalk Y. Gebru
 
-open source resume(html+js+css)
+Personal academic website: https://endalkyw.github.io
 
-<h2>开源简历（open source resume）</h2>
-自己应聘做了一个简历,喜欢的可以去改成自己；
-code写的也不够标准，有兴趣的可以协助修改下。
+A static, responsive page built with HTML and CSS. No build step, JavaScript,
+external fonts, or third-party dependencies are required.
 
-一些特色：
-<ul>
-  <li>响应式布局</li>
-  <li>局部打印</li>
-  <li>语音操作</li>
-</ul>
+- `index.html`: biography, selected research, experience, projects, and education.
+- `main.css`: layout, typography, mobile, and print styles.
+- `images/avatar.png`: the existing illustrated profile picture.
+- `Endalk_Gebru_CV.pdf`: downloadable CV.
 
+To preview, serve this directory with any static HTTP server, for example
+`python -m http.server 8000`, then visit http://localhost:8000.
 
+GitHub Pages serves the site from the repository's publishing branch. Update
+the HTML and replace the PDF as needed, then push to `main`.
