@@ -12,7 +12,7 @@ and entries stack. The top navigation scrolls to sections and highlights the
 current section, including the final section at the bottom of the page.
 Project previews retain hover and enlargement behavior without surrounding cards.
 
-- `index.html`: profile, five publications/manuscripts, experience, education, and twelve projects.
+- `index.html`: profile, seven publications/manuscripts, experience, education, and twelve projects.
 - `main.css`: responsive layout, hover/focus states, reduced-motion and print styles.
 - `site.js`: scroll-position navigation and accessible native-dialog figure viewer
   (zoom, full-size links, keyboard navigation, Escape, backdrop, focus restoration).
