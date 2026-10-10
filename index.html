@@ -7,34 +7,87 @@
   <meta name="theme-color" content="#ffffff">
   <title>Endalk Y. Gebru — Circuit Design &amp; Automation</title>
   <link rel="icon" href="images/avatar.png" type="image/png">
-  <link rel="stylesheet" href="main.css?v=20261010-nav2">
-  <script src="site.js?v=20261010-nav2" defer></script>
+  <link rel="stylesheet" href="main.css?v=20261010-sketch1">
+  <script src="site.js?v=20261010-sketch1" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <nav class="section-rail" aria-label="Main navigation">
     <a href="#main" aria-current="location"><span class="nav-dot" aria-hidden="true"></span><span class="nav-label">About</span></a>
-    <a href="#research"><span class="nav-dot" aria-hidden="true"></span><span class="nav-label">Publications</span></a>
     <a href="#background"><span class="nav-dot" aria-hidden="true"></span><span class="nav-label">Background</span></a>
+    <a href="#research"><span class="nav-dot" aria-hidden="true"></span><span class="nav-label">Publications</span></a>
     <a href="#projects"><span class="nav-dot" aria-hidden="true"></span><span class="nav-label">Projects</span></a>
   </nav>
   <div class="page">
     <main id="main">
       <section class="intro" aria-labelledby="intro-title">
+        <img class="portrait" src="images/avatar.png" alt="Endalk’s illustrated profile avatar" width="150" height="150">
         <div class="profile-copy">
           <p class="eyebrow">Circuit design &amp; automation</p>
           <h1 id="intro-title">Endalk Y. Gebru</h1>
           <p class="affiliation">PhD Student · Electrical and Computer Engineering<br>University of Minnesota, Twin Cities</p>
         </div>
-        <img class="portrait" src="images/avatar.png" alt="Endalk’s illustrated profile avatar" width="150" height="150">
-        <p class="bio">I work on analog and mixed-signal circuit design automation, with a focus on machine learning for circuit optimization and layout synthesis. My advisor is Dr. Sachin S. Sapatnekar.</p>
+        <div class="about-copy"><h2>About me</h2><p class="bio">I work on analog and mixed-signal circuit design automation, with a focus on machine learning for circuit optimization and layout synthesis. My advisor is Dr. Sachin S. Sapatnekar.</p></div>
         <nav class="contact-links" aria-label="Profile links">
           <a class="cv-link" href="Endalk_Gebru_CV.pdf">CV (PDF)</a>
           <a href="mailto:endalkyw@gmail.com">Email</a>
           <a href="https://github.com/endalkyw">GitHub</a>
         </nav>
       </section>
+      <div class="background-grid" id="background">
+        <section id="education" class="section" aria-labelledby="education-title">
+          <div class="section-heading"><h2 id="education-title">Education</h2></div>
+          <article class="entry organization">
+            <div>
+              <h3>University of Minnesota</h3>
+              <p class="role">PhD, Electrical and Computer Engineering</p>
+              <p class="meta">Expected 2028</p>
 
+            </div>
+            <div class="organization-logo"><img src="images/umn_logo.svg" alt="University of Minnesota logo" width="100" height="60"></div>
+          </article>
+          <article class="entry organization">
+            <div>
+              <h3>Addis Ababa University</h3>
+              <p class="role">BSc, Electrical and Computer Engineering</p>
+              <p class="meta">2022 · GPA 4.0 · AAU Gold Medal</p>
+
+            </div>
+            <div class="organization-logo logo-aau"><img src="images/AAU.png" alt="Addis Ababa University logo" width="100" height="60"></div>
+          </article>
+        </section>
+        <section id="experience" class="section" aria-labelledby="experience-title">
+          <div class="section-heading"><h2 id="experience-title">Experience</h2></div>
+          <article class="entry organization">
+            <div>
+              <h3>University of Minnesota</h3>
+              <p class="role">Graduate Research Assistant</p>
+              <p class="meta">2023–present</p>
+              <p>AI/ML for circuit optimization and layout automation.</p>
+            </div>
+            <div class="organization-logo"><img src="images/umn_logo.svg" alt="University of Minnesota logo" width="100" height="60"></div>
+          </article>
+          <article class="entry organization">
+            <div>
+              <h3>Cadence Design Systems</h3>
+              <p class="role">Analog EDA R&amp;D Intern</p>
+              <p class="meta">Summer 2025</p>
+              <p>Local LLM workflows for circuit retrieval and netlist generation in Virtuoso.</p>
+            </div>
+            <div class="organization-logo"><img src="images/logos/cadence.svg" alt="Cadence Design Systems logo" width="100" height="60"></div>
+          </article>
+          <article class="entry organization">
+            <div>
+              <h3>McGill University</h3>
+              <p class="role">Research Assistant · Remote</p>
+              <p class="meta">2022–2023</p>
+              <p>Wind response modeling and uncertainty quantification.</p>
+            </div>
+            <div class="organization-logo logo-mcgill"><img src="images/logos/mcgill.svg" alt="McGill University logo" width="100" height="60"></div>
+          </article>
+        </section>
+      </div>
+      <div class="work-grid">
       <section id="research" class="section" aria-labelledby="research-title">
         <div class="section-heading"><h2 id="research-title">Publications &amp; manuscripts</h2><span class="section-note">5 papers</span></div>
         <div class="papers">
@@ -76,64 +129,9 @@
           </article>
         </div>
       </section>
-
-      <div class="background-grid" id="background">
-        <section id="experience" class="section" aria-labelledby="experience-title">
-          <div class="section-heading"><h2 id="experience-title">Experience</h2></div>
-          <article class="entry organization">
-            <div>
-              <h3>University of Minnesota</h3>
-              <p class="role">Graduate Research Assistant</p>
-              <p class="meta">2023–present</p>
-              <p>AI/ML for circuit optimization and layout automation.</p>
-            </div>
-            <div class="organization-logo"><img src="images/umn_logo.svg" alt="University of Minnesota logo" width="100" height="60"></div>
-          </article>
-          <article class="entry organization">
-            <div>
-              <h3>Cadence Design Systems</h3>
-              <p class="role">Analog EDA R&amp;D Intern</p>
-              <p class="meta">Summer 2025</p>
-              <p>Local LLM workflows for circuit retrieval and netlist generation in Virtuoso.</p>
-            </div>
-            <div class="organization-logo"><img src="images/logos/cadence.svg" alt="Cadence Design Systems logo" width="100" height="60"></div>
-          </article>
-          <article class="entry organization">
-            <div>
-              <h3>McGill University</h3>
-              <p class="role">Research Assistant · Remote</p>
-              <p class="meta">2022–2023</p>
-              <p>Wind response modeling and uncertainty quantification.</p>
-            </div>
-            <div class="organization-logo logo-mcgill"><img src="images/logos/mcgill.svg" alt="McGill University logo" width="100" height="60"></div>
-          </article>
-        </section>
-        <section id="education" class="section" aria-labelledby="education-title">
-          <div class="section-heading"><h2 id="education-title">Education</h2></div>
-          <article class="entry organization">
-            <div>
-              <h3>University of Minnesota</h3>
-              <p class="role">PhD, Electrical and Computer Engineering</p>
-              <p class="meta">Expected 2028</p>
-
-            </div>
-            <div class="organization-logo"><img src="images/umn_logo.svg" alt="University of Minnesota logo" width="100" height="60"></div>
-          </article>
-          <article class="entry organization">
-            <div>
-              <h3>Addis Ababa University</h3>
-              <p class="role">BSc, Electrical and Computer Engineering</p>
-              <p class="meta">2022 · GPA 4.0 · AAU Gold Medal</p>
-
-            </div>
-            <div class="organization-logo logo-aau"><img src="images/AAU.png" alt="Addis Ababa University logo" width="100" height="60"></div>
-          </article>
-        </section>
-      </div>
-
       <section id="projects" class="section" aria-labelledby="projects-title">
         <div class="section-heading"><h2 id="projects-title">Projects</h2><span class="section-note">12 projects</span></div>
-        <p class="section-description">Circuit design, automation, and machine learning. Select any preview to explore its figure; project figures are coming soon.</p>
+        <p class="section-description">Select a preview to enlarge it. Project figures are coming soon.</p>
         <div class="project-grid">
           <article class="project" id="project-chiplet-gpt2">
             <div class="project-copy">
@@ -269,6 +267,7 @@
           </article>
         </div>
       </section>
+      </div>
     </main>
     <footer><span>Endalk Y. Gebru · Minneapolis, MN</span><a href="mailto:endalkyw@gmail.com">endalkyw@gmail.com</a></footer>
   </div>
