@@ -5,9 +5,9 @@ Personal academic website: https://endalkyw.github.io
 A static, responsive, single-page site. HTML contains all content; a small vanilla
 JavaScript file adds navigation tracking and bounded in-place figure previews. No build step or third-party dependencies.
 The desktop layout pairs a sticky profile sidebar with a research-first reading
-column. Serif headings, readable 16px titles, and blue resource links sit on a warm white background.
-Publications use compact venue/content rows, followed by project rows with figures
-beside the descriptions and education/experience. On phones the profile moves above the content
+column. Serif headings, 15px publication titles, and blue resource links sit on a warm white background.
+Publications use compact venue/content rows, followed by an unboxed two-column project gallery with small figures
+above the descriptions and education/experience. Below 900px, the gallery becomes one column. On phones the profile moves above the content
 and entries stack. The top navigation scrolls to sections and highlights the
 current section, including the final section at the bottom of the page.
 Project previews grow to 118% in place on hover or tap, without navigation or popups.

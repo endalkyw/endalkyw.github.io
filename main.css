@@ -40,35 +40,31 @@ h2 { margin: 0; font: 400 28px/1.25 Georgia, "Times New Roman", serif; letter-sp
 .section-note { font-size: 13px; color: var(--muted); }
 h3 { margin: 0; font-size: 16px; line-height: 1.45; font-weight: 600; }
 .paper { display: grid; grid-template-columns: 106px minmax(0, 1fr); gap: 20px; }
-.paper + .paper { margin-top: 24px; }
-.paper h3 { line-height: 1.45; }
-.venue { padding-top: 2px; font-size: 13px; }
+.paper + .paper { margin-top: 17px; }
+.paper h3 { font-size: 15px; line-height: 1.4; color: var(--text); }
+.venue { padding-top: 2px; font-size: 12px; }
 .venue span, .venue a { color: var(--link); font-weight: 600; }
 .venue small { display: block; margin-top: 3px; color: var(--muted); font-size: 12px; }
-.authors { margin: 5px 0 0; color: var(--muted); font-size: 14px; line-height: 1.55; }
+.authors { margin: 3px 0 0; color: var(--muted); font-size: 13px; line-height: 1.45; }
 .authors strong { color: var(--text); font-weight: 500; }
-.paper-links { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 7px; }
+.paper-links { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-top: 3px; }
 .paper-link { display: inline-flex; align-items: center; gap: 5px; min-height: 24px; font-size: 13px; font-weight: 500; }
 .link-icon { width: 14px; height: 14px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
-.paper h3 { color: var(--text); }
 .contact-links a span { color: currentColor; }
 .advisor a, .affiliation a { text-decoration: underline; text-decoration-color: #205fa140; text-underline-offset: 3px; }
 .section-description { margin: -12px 0 24px; color: var(--muted); font-size: 14px; }
-.project-grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
-.project { display: grid; grid-template-columns: minmax(0, 1fr) 76px; align-items: start; gap: 14px; padding-top: 17px; border-top: 1px solid var(--rule); }
+.project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 32px; }
+.project { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; min-width: 0; padding-top: 17px; border-top: 1px solid var(--rule); }
 .project-copy { min-width: 0; }
-.project p { font-size: 14px; color: var(--muted); margin: 5px 0 0; line-height: 1.5; }
+.project p { font-size: 13px; color: var(--muted); margin: 5px 0 0; line-height: 1.5; }
 .project .meta { font-size: 12px; margin: 0 0 5px; }
 .project h3 { font-size: 15px; }
-.figure-preview { display: block; width: 100%; margin-top: 19px; padding: 0; border: 0; background: none; cursor: pointer; position: relative; }
-.figure-preview img { display: block; width: 100%; height: 66px; object-fit: contain; mix-blend-mode: multiply; transform-origin: right center; transition: transform .2s; }
+.figure-preview { order: -1; display: block; width: 160px; max-width: 100%; height: 100px; margin: 0; padding: 0; border: 0; background: none; cursor: pointer; position: relative; }
+.figure-preview img { display: block; width: 100%; height: 100%; object-fit: contain; mix-blend-mode: multiply; transform-origin: left center; transition: transform .2s; }
 /* Fixed layout footprint; visual growth is capped at 118% (189px on desktop). */
 .figure-preview[aria-pressed="true"] img { transform: scale(1.18); }
 @media (hover: hover) and (pointer: fine) { .figure-preview:hover img { transform: scale(1.18); } }
-.project.has-figure { grid-template-columns: minmax(0, 1fr) 160px; align-items: center; gap: 32px; }
-.has-figure h3 { font-size: 16px; }
-.has-figure .figure-preview { margin-top: 0; }
-.has-figure .figure-preview img { height: 100px; mix-blend-mode: normal; background: white; }
+.has-figure .figure-preview img { mix-blend-mode: normal; }
 .background-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; }
 .organization { display: grid; grid-template-columns: minmax(0, 1fr) 42px; gap: 10px; align-items: start; }
 .organization + .organization { margin-top: 22px; }
@@ -83,15 +79,11 @@ h3 { margin: 0; font-size: 16px; line-height: 1.45; font-weight: 600; }
 footer { display: flex; justify-content: space-between; gap: 16px; margin-top: 48px; padding: 20px 0 30px; border-top: 1px solid var(--rule); font-size: 13px; color: var(--muted); }
 @media (max-width: 1050px) {
   .site-layout { grid-template-columns: 190px minmax(0, 1fr); gap: 40px; padding-inline: 28px; }
-  .project-grid { grid-template-columns: 1fr; gap: 18px; }
-  .project { grid-template-columns: minmax(0, 1fr) 100px; }
-  .project.has-figure { grid-template-columns: minmax(0, 1fr) 140px; gap: 28px; }
-  .has-figure .figure-preview img { height: 92px; }
-  .figure-preview img { height: 76px; }
-  .figure-preview { margin-top: 0; }
-  .project h3 { font-size: 16px; }
   .paper { grid-template-columns: 96px minmax(0, 1fr); gap: 16px; }
   .background-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 900px) {
+  .project-grid { grid-template-columns: 1fr; gap: 22px; }
 }
 @media (max-width: 720px) {
   html { scroll-padding-top: 76px; }
@@ -118,11 +110,6 @@ footer { display: flex; justify-content: space-between; gap: 16px; margin-top: 4
   .paper { grid-template-columns: 1fr; gap: 3px; }
   .venue { display: flex; align-items: baseline; gap: 8px; }
   .venue small { margin: 0; }
-  .paper + .paper { margin-top: 24px; }
-  .project { grid-template-columns: minmax(0, 1fr) 80px; gap: 14px; }
-  .project.has-figure { grid-template-columns: minmax(0, 1fr) 112px; gap: 24px; }
-  .has-figure .figure-preview img { height: 78px; }
-  .figure-preview img { height: 62px; }
   .background-grid { gap: 30px; }
 }
 @media (max-width: 380px) {
@@ -132,8 +119,6 @@ footer { display: flex; justify-content: space-between; gap: 16px; margin-top: 4
   h1 { font-size: 23px; }
   .section-rail { gap: 20px; }
   .contact-links { gap: 16px; font-size: 13px; }
-  .project { grid-template-columns: minmax(0, 1fr) 65px; gap: 12px; }
-  .figure-preview img { height: 54px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; } }
 @media print { .section-rail, .skip-link, footer { display: none; } .site-layout { display: block; padding: 0; } .profile { position: static; margin: 0; } .profile-focus, .location { display: none; } .paper, .entry, .project { break-inside: avoid; } a { color: inherit; } }
