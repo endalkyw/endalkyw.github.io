@@ -10,6 +10,8 @@ top so navigation stays easy to find. Background covers experience and education
 The desktop layout places the profile and About panel above two paired rows:
 education beside experience, then publications beside projects. These columns
 stack on phones. Navigation honors the selected column when sections share a row.
+Sections use an unboxed white layout, compact typography, inline dates, and subtle
+dividers. Project previews keep their hover and enlargement behavior without cards.
 
 - `index.html`: profile, five publications/manuscripts, experience, education, and twelve projects.
 - `main.css`: responsive layout, hover/focus states, reduced-motion and print styles.
