@@ -5,8 +5,8 @@ Personal academic website: https://endalkyw.github.io
 A static, responsive, single-page site. HTML contains all content; a small vanilla
 JavaScript file adds the figure lightbox. No build step or third-party dependencies.
 The fixed left dot rail scrolls to sections on the same page. Its current-section
-dot grows as you scroll; labels appear beside the dots on desktop and on hover
-or keyboard focus on smaller screens. Background covers experience and education.
+dot grows as you scroll. On narrow screens it becomes a fixed, labeled bar at the
+top so navigation stays easy to find. Background covers experience and education.
 
 - `index.html`: profile, five publications/manuscripts, experience, education, and twelve projects.
 - `main.css`: responsive layout, hover/focus states, reduced-motion and print styles.
