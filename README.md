@@ -4,14 +4,13 @@ Personal academic website: https://endalkyw.github.io
 
 A static, responsive, single-page site. HTML contains all content; a small vanilla
 JavaScript file adds the figure lightbox. No build step or third-party dependencies.
-The fixed left dot rail scrolls to sections on the same page. Its current-section
-dot grows as you scroll. On narrow screens it becomes a fixed, labeled bar at the
-top so navigation stays easy to find. Background covers experience and education.
-The desktop layout places the profile and About panel above two paired rows:
-education beside experience, then publications beside projects. These columns
-stack on phones. Navigation honors the selected column when sections share a row.
-Sections use an unboxed white layout, compact typography, inline dates, and subtle
-dividers. Project previews keep their hover and enlargement behavior without cards.
+The desktop layout pairs a sticky profile sidebar with a research-first reading
+column. Serif headings and muted green accents sit on a warm white background.
+Publications use compact venue/content rows, followed by a two-column project
+gallery and education/experience. On phones the profile moves above the content
+and entries stack. The top navigation scrolls to sections and highlights the
+current section, including the final section at the bottom of the page.
+Project previews retain hover and enlargement behavior without surrounding cards.
 
 - `index.html`: profile, five publications/manuscripts, experience, education, and twelve projects.
 - `main.css`: responsive layout, hover/focus states, reduced-motion and print styles.
