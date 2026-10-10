@@ -36,6 +36,22 @@
   const image = dialog.querySelector('#figure-image');
   const title = dialog.querySelector('#figure-title');
   const caption = dialog.querySelector('#figure-caption');
+  const zoomButton = dialog.querySelector('.dialog-zoom');
+  const originalLink = dialog.querySelector('.figure-original');
+  const stage = dialog.querySelector('.figure-stage');
+  function resetZoom() {
+    dialog.classList.remove('is-zoomed');
+    zoomButton.textContent = 'Zoom in';
+    zoomButton.setAttribute('aria-pressed', 'false');
+    stage.scrollTo(0, 0);
+  }
+  image.addEventListener('load', () => image.style.setProperty('--figure-width', `${image.naturalWidth}px`));
+  zoomButton.addEventListener('click', () => {
+    const zoomed = dialog.classList.toggle('is-zoomed');
+    zoomButton.textContent = zoomed ? 'Fit figure' : 'Zoom in';
+    zoomButton.setAttribute('aria-pressed', String(zoomed));
+    if (!zoomed) stage.scrollTo(0, 0);
+  });
   let trigger;
   let backdropPress = false;
 
@@ -44,8 +60,10 @@
       if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
       event.preventDefault();
       trigger = preview;
+      resetZoom();
       title.textContent = preview.closest('.project').querySelector('h3').textContent;
       image.src = preview.href;
+      originalLink.href = preview.href;
       image.alt = preview.querySelector('img').alt;
       caption.textContent = preview.dataset.caption || '';
       dialog.showModal();
@@ -56,10 +74,18 @@
   const closeButton = dialog.querySelector('.dialog-close');
   closeButton.addEventListener('click', () => dialog.close());
   dialog.addEventListener('keydown', event => {
-    // Close is the viewer's only interactive control; keep Tab inside it.
+    // Cycle through all viewer controls while the modal is open.
     if (event.key === 'Tab') {
-      event.preventDefault();
-      closeButton.focus();
+      const controls = [...dialog.querySelectorAll('button, a[href], [tabindex="0"]')];
+      const first = controls[0];
+      const last = controls[controls.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
     }
   });
   const outside = event => {

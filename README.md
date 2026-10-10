@@ -6,8 +6,8 @@ A static, responsive, single-page site. HTML contains all content; a small vanil
 JavaScript file adds the figure lightbox. No build step or third-party dependencies.
 The desktop layout pairs a sticky profile sidebar with a research-first reading
 column. Serif headings and muted green accents sit on a warm white background.
-Publications use compact venue/content rows, followed by a two-column project
-gallery and education/experience. On phones the profile moves above the content
+Publications use compact venue/content rows, followed by project rows with figures
+beside the descriptions and education/experience. On phones the profile moves above the content
 and entries stack. The top navigation scrolls to sections and highlights the
 current section, including the final section at the bottom of the page.
 Project previews retain hover and enlargement behavior without surrounding cards.
@@ -15,9 +15,10 @@ Project previews retain hover and enlargement behavior without surrounding cards
 - `index.html`: profile, five publications/manuscripts, experience, education, and twelve projects.
 - `main.css`: responsive layout, hover/focus states, reduced-motion and print styles.
 - `site.js`: scroll-position navigation and accessible native-dialog figure viewer
-  (close button, Escape, backdrop, focus restoration).
+  (zoom, full-size links, keyboard navigation, Escape, backdrop, focus restoration).
 - `images/avatar.png`: existing profile picture, unchanged.
-- `images/projects/`: one explicitly labeled placeholder SVG for each project.
+- `images/projects/`: project figures and explicitly labeled placeholders for upcoming figures.
+- `images/projects/sources/`: the ten supplied PNGs, preserved unchanged.
 - `Endalk_Gebru_CV.pdf`: downloadable CV.
 
 ## Adding project figures
@@ -31,7 +32,19 @@ with the real figure when ready. SVG, PNG, JPEG, and WebP work:
    resolution image than the thumbnail if desired.
 3. Replace the image `alt` text and link `data-caption` with a description of the
    real figure. Remove the "Figure coming soon" wording for that project.
-4. Update the section's coming-soon note once all figures are available.
+4. Add `has-figure` to the project's article class for a larger preview, and set
+   the image's natural `width` and `height` plus `loading="lazy"`.
+5. Update the section's coming-soon note once all figures are available.
+
+The supplied figures map to HISIM/chiplet optimization, 94 GHz PA/LNA design,
+Nanohmics readout layout, logic locking, and the biquad filter. The two composite
+SVGs embed the original PNGs without redrawing or modifying the scientific data:
+
+- `logic-locking-figures.svg`: a 2×2 plate; unlocked left (`xor_c880_1.png`
+  above `xor_c880_3.png`), locked right (`xor_c880_2.png` above `xor_c880_4.png`).
+  This ordering is inferred from the added graph nodes and waveform differences.
+- `biquad-filter-figures.svg`: `filter.png` and `ota.png` on the left,
+  `response.png` on the right.
 
 | Project | Figure basename |
 | --- | --- |
