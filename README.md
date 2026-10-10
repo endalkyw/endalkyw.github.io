@@ -5,12 +5,13 @@ Personal academic website: https://endalkyw.github.io
 A static, responsive, single-page site. HTML contains all content; a small vanilla
 JavaScript file adds navigation tracking and bounded in-place figure previews. No build step or third-party dependencies.
 The desktop layout pairs a sticky profile sidebar with a research-first reading
-column. Serif headings and muted green accents sit on a warm white background.
+column. Serif headings, readable 16px titles, and blue resource links sit on a warm white background.
 Publications use compact venue/content rows, followed by project rows with figures
 beside the descriptions and education/experience. On phones the profile moves above the content
 and entries stack. The top navigation scrolls to sections and highlights the
 current section, including the final section at the bottom of the page.
 Project previews grow to 118% in place on hover or tap, without navigation or popups.
+Paper resources link to publisher records, arXiv, and author PDFs verified against university listings and Crossref metadata.
 Papers are sorted newest year first; the undated manuscript stays at the end.
 
 - `index.html`: profile, seven publications/manuscripts, experience, education, and eleven projects.
@@ -65,7 +66,7 @@ provenance are in `images/projects/generation-notes.md`.
 | Visible light communication thesis | `visible-light` |
 | Microprocessor | `microprocessor` |
 
-The project list combines the latest CV, the earlier CV's biquad project, the
+The project list combines the latest CV, the earlier CV's biquad project,
 and undergraduate thesis. The HISIM
 workload-mapping entry and the updated chiplet optimization entry are the same
 project and appear once. Manuscripts retain their supplied submission status.
