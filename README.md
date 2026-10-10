@@ -11,7 +11,7 @@ beside the descriptions and education/experience. On phones the profile moves ab
 and entries stack. The top navigation scrolls to sections and highlights the
 current section, including the final section at the bottom of the page.
 Project previews grow to 118% in place on hover or tap, without navigation or popups.
-Paper resources link to publisher records, arXiv, and author PDFs verified against university listings and Crossref metadata.
+Paper titles use plain dark text. Separate blue resource links lead to publisher records and arXiv; direct paper PDF links are omitted.
 Papers are sorted newest year first; the undated manuscript stays at the end.
 
 - `index.html`: profile, seven publications/manuscripts, experience, education, and eleven projects.
