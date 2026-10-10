@@ -3,19 +3,20 @@
 Personal academic website: https://endalkyw.github.io
 
 A static, responsive, single-page site. HTML contains all content; a small vanilla
-JavaScript file adds the figure lightbox. No build step or third-party dependencies.
+JavaScript file adds navigation tracking and bounded in-place figure previews. No build step or third-party dependencies.
 The desktop layout pairs a sticky profile sidebar with a research-first reading
 column. Serif headings and muted green accents sit on a warm white background.
 Publications use compact venue/content rows, followed by project rows with figures
 beside the descriptions and education/experience. On phones the profile moves above the content
 and entries stack. The top navigation scrolls to sections and highlights the
 current section, including the final section at the bottom of the page.
-Project previews retain hover and enlargement behavior without surrounding cards.
+Project previews grow to 118% in place on hover or tap, without navigation or popups.
+Papers are sorted newest year first; the undated manuscript stays at the end.
 
 - `index.html`: profile, seven publications/manuscripts, experience, education, and twelve projects.
 - `main.css`: responsive layout, hover/focus states, reduced-motion and print styles.
-- `site.js`: scroll-position navigation and accessible native-dialog figure viewer
-  (zoom, full-size links, keyboard navigation, Escape, backdrop, focus restoration).
+- `site.js`: scroll-position navigation and accessible preview toggles (tap, Enter,
+  Space, Escape, and outside-click reset).
 - `images/avatar.png`: existing profile picture, unchanged.
 - `images/projects/`: project figures and explicitly labeled placeholders for upcoming figures.
 - `images/projects/sources/`: the ten supplied PNGs, preserved unchanged.
@@ -27,11 +28,10 @@ Every project is present in the HTML even without JavaScript. Replace a placehol
 with the real figure when ready. SVG, PNG, JPEG, and WebP work:
 
 1. Save the figure in `images/projects/` using the matching project slug below.
-2. In that project's `.figure-preview` link in `index.html`, update both `href`
-   and the child image's `src` to the figure path. The link can point to a higher
-   resolution image than the thumbnail if desired.
-3. Replace the image `alt` text and link `data-caption` with a description of the
-   real figure. Remove the "Figure coming soon" wording for that project.
+2. In that project's `.figure-preview` button in `index.html`, update the child
+   image's `src` to the figure path.
+3. Replace the image `alt` text with a description of the real figure. Remove the
+   "Figure coming soon" wording for that project.
 4. Add `has-figure` to the project's article class for a larger preview, and set
    the image's natural `width` and `height` plus `loading="lazy"`.
 5. Update the section's coming-soon note once all figures are available.

@@ -30,76 +30,21 @@
   window.addEventListener('pageshow', scheduleSectionUpdate);
   updateCurrentSection();
 
-  const dialog = document.querySelector('#figure-dialog');
-  if (!dialog || typeof dialog.showModal !== 'function') return;
-
-  const image = dialog.querySelector('#figure-image');
-  const title = dialog.querySelector('#figure-title');
-  const caption = dialog.querySelector('#figure-caption');
-  const zoomButton = dialog.querySelector('.dialog-zoom');
-  const originalLink = dialog.querySelector('.figure-original');
-  const stage = dialog.querySelector('.figure-stage');
-  function resetZoom() {
-    dialog.classList.remove('is-zoomed');
-    zoomButton.textContent = 'Zoom in';
-    zoomButton.setAttribute('aria-pressed', 'false');
-    stage.scrollTo(0, 0);
-  }
-  image.addEventListener('load', () => image.style.setProperty('--figure-width', `${image.naturalWidth}px`));
-  zoomButton.addEventListener('click', () => {
-    const zoomed = dialog.classList.toggle('is-zoomed');
-    zoomButton.textContent = zoomed ? 'Fit figure' : 'Zoom in';
-    zoomButton.setAttribute('aria-pressed', String(zoomed));
-    if (!zoomed) stage.scrollTo(0, 0);
-  });
-  let trigger;
-  let backdropPress = false;
-
-  document.querySelectorAll('[data-figure]').forEach(preview => {
-    preview.addEventListener('click', event => {
-      if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
-      event.preventDefault();
-      trigger = preview;
-      resetZoom();
-      title.textContent = preview.closest('.project').querySelector('h3').textContent;
-      image.src = preview.href;
-      originalLink.href = preview.href;
-      image.alt = preview.querySelector('img').alt;
-      caption.textContent = preview.dataset.caption || '';
-      dialog.showModal();
-      document.documentElement.classList.add('figure-open');
+  const previews = [...document.querySelectorAll('.figure-preview')];
+  function resetPreviews(except) {
+    previews.forEach(preview => {
+      if (preview !== except) preview.setAttribute('aria-pressed', 'false');
     });
-  });
-
-  const closeButton = dialog.querySelector('.dialog-close');
-  closeButton.addEventListener('click', () => dialog.close());
-  dialog.addEventListener('keydown', event => {
-    // Cycle through all viewer controls while the modal is open.
-    if (event.key === 'Tab') {
-      const controls = [...dialog.querySelectorAll('button, a[href], [tabindex="0"]')];
-      const first = controls[0];
-      const last = controls[controls.length - 1];
-      if (event.shiftKey && document.activeElement === first) {
-        event.preventDefault();
-        last.focus();
-      } else if (!event.shiftKey && document.activeElement === last) {
-        event.preventDefault();
-        first.focus();
-      }
+  }
+  // Touch, mouse clicks, Enter and Space only toggle a bounded in-place preview.
+  document.addEventListener('click', event => {
+    const preview = event.target.closest('.figure-preview');
+    resetPreviews(preview);
+    if (preview) {
+      preview.setAttribute('aria-pressed', String(preview.getAttribute('aria-pressed') !== 'true'));
     }
   });
-  const outside = event => {
-    const bounds = dialog.getBoundingClientRect();
-    return event.clientX < bounds.left || event.clientX > bounds.right ||
-      event.clientY < bounds.top || event.clientY > bounds.bottom;
-  };
-  dialog.addEventListener('pointerdown', event => { backdropPress = outside(event); });
-  dialog.addEventListener('click', event => {
-    if (event.target === dialog && backdropPress && outside(event)) dialog.close();
-    backdropPress = false;
-  });
-  dialog.addEventListener('close', () => {
-    document.documentElement.classList.remove('figure-open');
-    trigger?.focus({ preventScroll: true });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') resetPreviews();
   });
 })();
