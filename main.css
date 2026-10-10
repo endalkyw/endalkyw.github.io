@@ -61,10 +61,10 @@ h3 { margin: 0; font-size: 14px; line-height: 1.45; font-weight: 600; }
 .figure-action svg { width: 10px; }
 .figure-preview:hover, .figure-preview:focus-visible { text-decoration: none; }
 .figure-preview:hover img, .figure-preview:focus-visible img { transform: translateY(-3px) scale(1.04); opacity: .75; }
-.project.has-figure { grid-template-columns: minmax(0, 1fr) 260px; align-items: center; gap: 24px; }
+.project.has-figure { grid-template-columns: minmax(0, 1fr) 220px; align-items: center; gap: 24px; }
 .has-figure h3 { font-size: 14px; }
 .has-figure .figure-preview { margin-top: 0; }
-.has-figure .figure-preview img { height: 175px; mix-blend-mode: normal; background: white; }
+.has-figure .figure-preview img { height: 145px; mix-blend-mode: normal; background: white; }
 .has-figure .figure-action { font-size: 11px; margin-top: 8px; }
 .background-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; }
 .organization { display: grid; grid-template-columns: minmax(0, 1fr) 42px; gap: 10px; align-items: start; }
@@ -101,8 +101,8 @@ footer { display: flex; justify-content: space-between; gap: 16px; margin-top: 4
   .site-layout { grid-template-columns: 190px minmax(0, 1fr); gap: 40px; padding-inline: 28px; }
   .project-grid { grid-template-columns: 1fr; gap: 20px; }
   .project { grid-template-columns: minmax(0, 1fr) 100px; }
-  .project.has-figure { grid-template-columns: minmax(0, 1fr) 190px; gap: 20px; }
-  .has-figure .figure-preview img { height: 145px; }
+  .project.has-figure { grid-template-columns: minmax(0, 1fr) 165px; gap: 20px; }
+  .has-figure .figure-preview img { height: 120px; }
   .figure-preview img { height: 76px; }
   .figure-preview { margin-top: 0; }
   .project h3 { font-size: 14px; }
@@ -137,7 +137,8 @@ footer { display: flex; justify-content: space-between; gap: 16px; margin-top: 4
   .paper + .paper { margin-top: 24px; }
   .project { grid-template-columns: minmax(0, 1fr) 80px; gap: 14px; }
   .project.has-figure { grid-template-columns: 1fr; gap: 12px; }
-  .has-figure .figure-preview img { height: auto; max-height: 230px; }
+  .has-figure .figure-preview { width: min(100%, 280px); justify-self: center; }
+  .has-figure .figure-preview img { height: auto; max-height: 190px; }
   .figure-preview img { height: 62px; }
   .background-grid { gap: 30px; }
   .figure-dialog { width: calc(100% - 24px); padding: 18px; max-height: calc(100dvh - 24px); }

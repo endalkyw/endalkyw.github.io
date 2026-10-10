@@ -46,6 +46,11 @@ SVGs embed the original PNGs without redrawing or modifying the scientific data:
 - `biquad-filter-figures.svg`: `filter.png` and `ota.png` on the left,
   `response.png` on the right.
 
+`hisim-clean.svg` removes the upper-right heading while retaining the original
+plot and diagrams. `diffusion-ood-illustration.png` is a slide-style conceptual
+illustration for the diffusion project. Image-generation prompts and asset
+provenance are in `images/projects/generation-notes.md`.
+
 | Project | Figure basename |
 | --- | --- |
 | Chiplet-based GPT-2 inference | `chiplet-gpt2` |
