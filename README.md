@@ -13,7 +13,7 @@ current section, including the final section at the bottom of the page.
 Project previews grow to 118% in place on hover or tap, without navigation or popups.
 Papers are sorted newest year first; the undated manuscript stays at the end.
 
-- `index.html`: profile, seven publications/manuscripts, experience, education, and twelve projects.
+- `index.html`: profile, seven publications/manuscripts, experience, education, and eleven projects.
 - `main.css`: responsive layout, hover/focus states, reduced-motion and print styles.
 - `site.js`: scroll-position navigation and accessible preview toggles (tap, Enter,
   Space, Escape, and outside-click reset).
@@ -64,10 +64,9 @@ provenance are in `images/projects/generation-notes.md`.
 | Floorplanning | `floorplanning` |
 | Visible light communication thesis | `visible-light` |
 | Microprocessor | `microprocessor` |
-| FinFET lookup tables | `finfet-lut` |
 
 The project list combines the latest CV, the earlier CV's biquad project, the
-undergraduate thesis, and the original site's FinFET lookup-table work. The HISIM
+and undergraduate thesis. The HISIM
 workload-mapping entry and the updated chiplet optimization entry are the same
 project and appear once. Manuscripts retain their supplied submission status.
 
