@@ -8,6 +8,7 @@
   <title>Endalk Y. Gebru — Circuit Design &amp; Automation</title>
   <link rel="icon" href="images/avatar.png" type="image/png">
   <link rel="stylesheet" href="main.css">
+  <script src="site.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -17,6 +18,7 @@
       <nav aria-label="Main navigation">
         <a href="#research">Publications</a>
         <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
         <a href="#projects">Projects</a>
       </nav>
     </header>
@@ -81,61 +83,201 @@
       <div class="background-grid">
         <section id="experience" class="section" aria-labelledby="experience-title">
           <div class="section-heading"><h2 id="experience-title">Experience</h2></div>
-          <div class="experience-list">
-            <article class="entry">
-              <div class="entry-heading"><h3>University of Minnesota</h3><span class="meta">2023–present</span></div>
+          <article class="entry organization">
+            <div>
+              <h3>University of Minnesota</h3>
               <p class="role">Graduate Research Assistant</p>
+              <p class="meta">2023–present</p>
               <p>AI/ML for circuit optimization and layout automation.</p>
-            </article>
-            <article class="entry">
-              <div class="entry-heading"><h3>Cadence Design Systems</h3><span class="meta">Summer 2025</span></div>
+            </div>
+            <div class="organization-logo"><img src="images/umn_logo.svg" alt="University of Minnesota logo" width="100" height="60"></div>
+          </article>
+          <article class="entry organization">
+            <div>
+              <h3>Cadence Design Systems</h3>
               <p class="role">Analog EDA R&amp;D Intern</p>
+              <p class="meta">Summer 2025</p>
               <p>Local LLM workflows for circuit retrieval and netlist generation in Virtuoso.</p>
-            </article>
-            <article class="entry">
-              <div class="entry-heading"><h3>McGill University</h3><span class="meta">2022–2023</span></div>
+            </div>
+            <div class="organization-logo"><img src="images/logos/cadence.svg" alt="Cadence Design Systems logo" width="100" height="60"></div>
+          </article>
+          <article class="entry organization">
+            <div>
+              <h3>McGill University</h3>
               <p class="role">Research Assistant · Remote</p>
+              <p class="meta">2022–2023</p>
               <p>Wind response modeling and uncertainty quantification.</p>
-            </article>
-          </div>
+            </div>
+            <div class="organization-logo logo-mcgill"><img src="images/logos/mcgill.svg" alt="McGill University logo" width="100" height="60"></div>
+          </article>
         </section>
         <section id="education" class="section" aria-labelledby="education-title">
           <div class="section-heading"><h2 id="education-title">Education</h2></div>
-          <article class="entry">
-            <h3>University of Minnesota</h3>
-            <p class="role">PhD, Electrical and Computer Engineering</p>
-            <p class="meta">Expected 2028</p>
+          <article class="entry organization">
+            <div>
+              <h3>University of Minnesota</h3>
+              <p class="role">PhD, Electrical and Computer Engineering</p>
+              <p class="meta">Expected 2028</p>
+
+            </div>
+            <div class="organization-logo"><img src="images/umn_logo.svg" alt="University of Minnesota logo" width="100" height="60"></div>
           </article>
-          <article class="entry">
-            <h3>Addis Ababa University</h3>
-            <p class="role">BSc, Electrical and Computer Engineering</p>
-            <p class="meta">2022 · GPA 4.0 · AAU Gold Medal</p>
+          <article class="entry organization">
+            <div>
+              <h3>Addis Ababa University</h3>
+              <p class="role">BSc, Electrical and Computer Engineering</p>
+              <p class="meta">2022 · GPA 4.0 · AAU Gold Medal</p>
+
+            </div>
+            <div class="organization-logo logo-aau"><img src="images/AAU.png" alt="Addis Ababa University logo" width="100" height="60"></div>
           </article>
         </section>
       </div>
 
       <section id="projects" class="section" aria-labelledby="projects-title">
-        <div class="section-heading"><h2 id="projects-title">Selected projects</h2></div>
+        <div class="section-heading"><h2 id="projects-title">Projects</h2><span class="section-note">12 projects</span></div>
+        <p class="section-description">Circuit design, automation, and machine learning. Select any preview to explore its figure; project figures are coming soon.</p>
         <div class="project-grid">
-          <article class="project">
-            <p class="meta">2025 · RF design</p>
-            <h3>94 GHz PA &amp; LNA</h3>
-            <p>Circuit design in Keysight ADS, balancing bandwidth, power, efficiency, and receiver noise.</p>
+          <article class="project" id="project-chiplet-gpt2">
+            <div class="project-copy">
+              <p class="meta">2026 · Chiplet optimization</p>
+              <h3>Chiplet-based GPT-2 inference</h3>
+              <p>Sensitivity-guided hierarchical optimization with HISIM 2.0 to minimize the cost–latency product under an area budget.</p>
+            </div>
+            <a class="figure-preview" href="images/projects/chiplet-gpt2.svg" data-figure data-caption="Figure coming soon. Sensitivity-guided hierarchical optimization with HISIM 2.0 to minimize the cost–latency product under an area budget." aria-label="Enlarge figure for Chiplet-based GPT-2 inference" aria-haspopup="dialog">
+              <img src="images/projects/chiplet-gpt2.svg" alt="Chiplet optimization — figure coming soon" width="800" height="600">
+              <span class="figure-action"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5M3 3l6 6m12-6-6 6M3 21l6-6m12 6-6-6"/></svg> View figure</span>
+            </a>
           </article>
-          <article class="project">
-            <p class="meta">2024 · Layout automation</p>
-            <h3>Readout IC layouts</h3>
-            <p>Infrared bolometer readout layouts using SkyWater 130 nm and ALIGN, with Nanohmics.</p>
+          <article class="project" id="project-rf-pa-lna">
+            <div class="project-copy">
+              <p class="meta">2025 · RF design</p>
+              <h3>94 GHz PA and LNA design</h3>
+              <p>Power amplifier and low-noise amplifier design in Keysight ADS, targeting 4 GHz bandwidth while balancing efficiency, power, and receiver noise.</p>
+            </div>
+            <a class="figure-preview" href="images/projects/rf-pa-lna.svg" data-figure data-caption="Figure coming soon. Power amplifier and low-noise amplifier design in Keysight ADS, targeting 4 GHz bandwidth while balancing efficiency, power, and receiver noise." aria-label="Enlarge figure for 94 GHz PA and LNA design" aria-haspopup="dialog">
+              <img src="images/projects/rf-pa-lna.svg" alt="RF circuit design — figure coming soon" width="800" height="600">
+              <span class="figure-action"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5M3 3l6 6m12-6-6 6M3 21l6-6m12 6-6-6"/></svg> View figure</span>
+            </a>
           </article>
-          <article class="project">
-            <p class="meta">2023 · EDA</p>
-            <h3>Static timing analysis</h3>
-            <p>A C++ framework for circuit delays, slack, and critical paths using NLDM timing models.</p>
+          <article class="project" id="project-diffusion-ood">
+            <div class="project-copy">
+              <p class="meta">2025 · Machine learning</p>
+              <h3>Diffusion models for out-of-distribution inference</h3>
+              <p>Investigated diffusion models for inference on inputs outside the training distribution.</p>
+            </div>
+            <a class="figure-preview" href="images/projects/diffusion-ood.svg" data-figure data-caption="Figure coming soon. Investigated diffusion models for inference on inputs outside the training distribution." aria-label="Enlarge figure for Diffusion models for out-of-distribution inference" aria-haspopup="dialog">
+              <img src="images/projects/diffusion-ood.svg" alt="Diffusion models — figure coming soon" width="800" height="600">
+              <span class="figure-action"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5M3 3l6 6m12-6-6 6M3 21l6-6m12 6-6-6"/></svg> View figure</span>
+            </a>
+          </article>
+          <article class="project" id="project-roic-layout">
+            <div class="project-copy">
+              <p class="meta">2024 · Layout automation</p>
+              <h3>CMOS readout IC layout automation</h3>
+              <p>Automated infrared bolometer readout layouts with SkyWater 130 nm and ALIGN, in collaboration with Nanohmics.</p>
+            </div>
+            <a class="figure-preview" href="images/projects/roic-layout.svg" data-figure data-caption="Figure coming soon. Automated infrared bolometer readout layouts with SkyWater 130 nm and ALIGN, in collaboration with Nanohmics." aria-label="Enlarge figure for CMOS readout IC layout automation" aria-haspopup="dialog">
+              <img src="images/projects/roic-layout.svg" alt="Readout IC layouts — figure coming soon" width="800" height="600">
+              <span class="figure-action"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5M3 3l6 6m12-6-6 6M3 21l6-6m12 6-6-6"/></svg> View figure</span>
+            </a>
+          </article>
+          <article class="project" id="project-logic-locking">
+            <div class="project-copy">
+              <p class="meta">2024 · Hardware security</p>
+              <h3>Logic locking for hardware security</h3>
+              <p>Implemented XOR, MUX, and LUT locking to generate locked netlists and keys, testing across circuits of varying complexity.</p>
+            </div>
+            <a class="figure-preview" href="images/projects/logic-locking.svg" data-figure data-caption="Figure coming soon. Implemented XOR, MUX, and LUT locking to generate locked netlists and keys, testing across circuits of varying complexity." aria-label="Enlarge figure for Logic locking for hardware security" aria-haspopup="dialog">
+              <img src="images/projects/logic-locking.svg" alt="Hardware security — figure coming soon" width="800" height="600">
+              <span class="figure-action"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5M3 3l6 6m12-6-6 6M3 21l6-6m12 6-6-6"/></svg> View figure</span>
+            </a>
+          </article>
+          <article class="project" id="project-biquad-filter">
+            <div class="project-copy">
+              <p class="meta">2023 · Analog design</p>
+              <h3>Fully differential CMOS biquad filter</h3>
+              <p>Designed and implemented a low-power biquad filter for hearing-aid applications in 65 nm technology.</p>
+            </div>
+            <a class="figure-preview" href="images/projects/biquad-filter.svg" data-figure data-caption="Figure coming soon. Designed and implemented a low-power biquad filter for hearing-aid applications in 65 nm technology." aria-label="Enlarge figure for Fully differential CMOS biquad filter" aria-haspopup="dialog">
+              <img src="images/projects/biquad-filter.svg" alt="Analog filter design — figure coming soon" width="800" height="600">
+              <span class="figure-action"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5M3 3l6 6m12-6-6 6M3 21l6-6m12 6-6-6"/></svg> View figure</span>
+            </a>
+          </article>
+          <article class="project" id="project-static-timing">
+            <div class="project-copy">
+              <p class="meta">2023 · EDA</p>
+              <h3>Static timing analysis</h3>
+              <p>Built a C++ framework using NLDM timing models to compute circuit delays, slack, and critical paths.</p>
+            </div>
+            <a class="figure-preview" href="images/projects/static-timing.svg" data-figure data-caption="Figure coming soon. Built a C++ framework using NLDM timing models to compute circuit delays, slack, and critical paths." aria-label="Enlarge figure for Static timing analysis" aria-haspopup="dialog">
+              <img src="images/projects/static-timing.svg" alt="Timing analysis — figure coming soon" width="800" height="600">
+              <span class="figure-action"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5M3 3l6 6m12-6-6 6M3 21l6-6m12 6-6-6"/></svg> View figure</span>
+            </a>
+          </article>
+          <article class="project" id="project-fastplace">
+            <div class="project-copy">
+              <p class="meta">2023 · Physical design</p>
+              <h3>FastPlace placement framework</h3>
+              <p>Built a placement framework implementing the FastPlace algorithm and tested it on IBM benchmark circuits.</p>
+            </div>
+            <a class="figure-preview" href="images/projects/fastplace.svg" data-figure data-caption="Figure coming soon. Built a placement framework implementing the FastPlace algorithm and tested it on IBM benchmark circuits." aria-label="Enlarge figure for FastPlace placement framework" aria-haspopup="dialog">
+              <img src="images/projects/fastplace.svg" alt="Circuit placement — figure coming soon" width="800" height="600">
+              <span class="figure-action"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5M3 3l6 6m12-6-6 6M3 21l6-6m12 6-6-6"/></svg> View figure</span>
+            </a>
+          </article>
+          <article class="project" id="project-floorplanning">
+            <div class="project-copy">
+              <p class="meta">2023 · Physical design</p>
+              <h3>Simulated annealing-based floorplanning</h3>
+              <p>Built a floorplanning framework using simulated annealing to optimize layout area and interconnect wire length.</p>
+            </div>
+            <a class="figure-preview" href="images/projects/floorplanning.svg" data-figure data-caption="Figure coming soon. Built a floorplanning framework using simulated annealing to optimize layout area and interconnect wire length." aria-label="Enlarge figure for Simulated annealing-based floorplanning" aria-haspopup="dialog">
+              <img src="images/projects/floorplanning.svg" alt="Floorplanning — figure coming soon" width="800" height="600">
+              <span class="figure-action"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5M3 3l6 6m12-6-6 6M3 21l6-6m12 6-6-6"/></svg> View figure</span>
+            </a>
+          </article>
+          <article class="project" id="project-visible-light">
+            <div class="project-copy">
+              <p class="meta">2022 · Undergraduate thesis</p>
+              <h3>Long-range visible light communication</h3>
+              <p>Undergraduate thesis on the design and implementation of a long-range visible light communication system.</p>
+            </div>
+            <a class="figure-preview" href="images/projects/visible-light.svg" data-figure data-caption="Figure coming soon. Undergraduate thesis on the design and implementation of a long-range visible light communication system." aria-label="Enlarge figure for Long-range visible light communication" aria-haspopup="dialog">
+              <img src="images/projects/visible-light.svg" alt="Optical communication — figure coming soon" width="800" height="600">
+              <span class="figure-action"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5M3 3l6 6m12-6-6 6M3 21l6-6m12 6-6-6"/></svg> View figure</span>
+            </a>
+          </article>
+          <article class="project" id="project-microprocessor">
+            <div class="project-copy">
+              <p class="meta">2021 · Digital design</p>
+              <h3>14-bit general-purpose microprocessor</h3>
+              <p>Designed an 18-instruction microprocessor with microprogrammed control and implemented it in Proteus.</p>
+            </div>
+            <a class="figure-preview" href="images/projects/microprocessor.svg" data-figure data-caption="Figure coming soon. Designed an 18-instruction microprocessor with microprogrammed control and implemented it in Proteus." aria-label="Enlarge figure for 14-bit general-purpose microprocessor" aria-haspopup="dialog">
+              <img src="images/projects/microprocessor.svg" alt="Microprocessor design — figure coming soon" width="800" height="600">
+              <span class="figure-action"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5M3 3l6 6m12-6-6 6M3 21l6-6m12 6-6-6"/></svg> View figure</span>
+            </a>
+          </article>
+          <article class="project" id="project-finfet-lut">
+            <div class="project-copy">
+              <p class="meta">Research · Analog automation</p>
+              <h3>FinFET lookup tables and parasitics prediction</h3>
+              <p>Extended the gm/ID methodology to GF12 FinFET devices to study transistor geometry and parasitics for analog layout automation.</p>
+            </div>
+            <a class="figure-preview" href="images/projects/finfet-lut.svg" data-figure data-caption="Figure coming soon. Extended the gm/ID methodology to GF12 FinFET devices to study transistor geometry and parasitics for analog layout automation." aria-label="Enlarge figure for FinFET lookup tables and parasitics prediction" aria-haspopup="dialog">
+              <img src="images/projects/finfet-lut.svg" alt="FinFET modeling — figure coming soon" width="800" height="600">
+              <span class="figure-action"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5M3 3l6 6m12-6-6 6M3 21l6-6m12 6-6-6"/></svg> View figure</span>
+            </a>
           </article>
         </div>
       </section>
     </main>
     <footer><span>Endalk Y. Gebru · Minneapolis, MN</span><a href="mailto:endalkyw@gmail.com">endalkyw@gmail.com</a></footer>
   </div>
+  <dialog class="figure-dialog" id="figure-dialog" aria-labelledby="figure-title" aria-describedby="figure-caption">
+    <div class="dialog-heading"><h2 id="figure-title">Project figure</h2><button class="dialog-close" type="button" aria-label="Close figure" autofocus>Close <span aria-hidden="true">×</span></button></div>
+    <figure><img id="figure-image" src="images/projects/chiplet-gpt2.svg" alt="Project figure placeholder"><figcaption id="figure-caption"></figcaption></figure>
+  </dialog>
 </body>
 </html>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+<title id="title">Microprocessor design — figure placeholder</title><desc id="desc">The project figure will be added soon. This is a placeholder, not a research result.</desc>
+<rect width="800" height="600" fill="#f1f5f8"/>
+<rect x="80" y="65" width="640" height="470" rx="16" fill="#fff" stroke="#d3dee7" stroke-width="2"/>
+<g fill="none" stroke="#8ca5b9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+<rect x="337" y="173" width="126" height="100" rx="8"/><circle cx="372" cy="206" r="10"/>
+<path d="m347 259 36-35 27 23 20-19 23 31"/>
+</g>
+<text x="400" y="344" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#304f67">Microprocessor design</text>
+<text x="400" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" fill="#62778a">Figure coming soon</text>
+</svg>
