@@ -4,11 +4,14 @@ Personal academic website: https://endalkyw.github.io
 
 A static, responsive, single-page site. HTML contains all content; a small vanilla
 JavaScript file adds the figure lightbox. No build step or third-party dependencies.
-Navigation links scroll to sections on the same page.
+The fixed left dot rail scrolls to sections on the same page. Its current-section
+dot grows as you scroll; labels appear beside the dots on desktop and on hover
+or keyboard focus on smaller screens. Background covers experience and education.
 
 - `index.html`: profile, five publications/manuscripts, experience, education, and twelve projects.
 - `main.css`: responsive layout, hover/focus states, reduced-motion and print styles.
-- `site.js`: accessible native-dialog figure viewer (close button, Escape, backdrop, focus restoration).
+- `site.js`: scroll-position navigation and accessible native-dialog figure viewer
+  (close button, Escape, backdrop, focus restoration).
 - `images/avatar.png`: existing profile picture, unchanged.
 - `images/projects/`: one explicitly labeled placeholder SVG for each project.
 - `Endalk_Gebru_CV.pdf`: downloadable CV.

@@ -1,4 +1,31 @@
 (() => {
+  const sectionLinks = [...document.querySelectorAll('.section-rail a')];
+  const sections = sectionLinks.map(link => document.querySelector(link.hash));
+  let scrollUpdatePending = false;
+
+  function updateCurrentSection() {
+    const marker = Math.min(window.innerHeight * 0.28, 180);
+    let current = 0;
+    sections.forEach((section, index) => {
+      if (section.getBoundingClientRect().top <= marker) current = index;
+    });
+    sectionLinks.forEach((link, index) => {
+      if (index === current) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
+    scrollUpdatePending = false;
+  }
+  function scheduleSectionUpdate() {
+    if (scrollUpdatePending) return;
+    scrollUpdatePending = true;
+    requestAnimationFrame(updateCurrentSection);
+  }
+  window.addEventListener('scroll', scheduleSectionUpdate, { passive: true });
+  window.addEventListener('resize', scheduleSectionUpdate);
+  window.addEventListener('hashchange', scheduleSectionUpdate);
+  window.addEventListener('pageshow', scheduleSectionUpdate);
+  updateCurrentSection();
+
   const dialog = document.querySelector('#figure-dialog');
   if (!dialog || typeof dialog.showModal !== 'function') return;
 

@@ -155,3 +155,79 @@ html { scroll-behavior: smooth; scroll-padding-top: 100px; scrollbar-gutter: sta
   .figure-dialog { display: none; }
   .project-grid { grid-template-columns: 1fr 1fr; }
 }
+
+/* Compact layout with an independent section rail. */
+html { scroll-padding-top: 36px; }
+.page { width: min(880px, calc(100% - 224px)); margin: 64px max(40px, calc((100vw - 1080px) / 2)) 28px auto; }
+.section-rail { position: fixed; left: max(24px, calc((100vw - 1080px) / 2)); top: 35vh; width: 140px; z-index: 12; }
+.section-rail::before { content: ""; position: absolute; left: 10px; top: 22px; bottom: 22px; width: 1px; background: var(--rule); }
+.section-rail a { display: flex; align-items: center; gap: 12px; position: relative; min-height: 44px; color: var(--muted); font-size: 12px; }
+.section-rail a:hover { text-decoration: none; color: var(--link); }
+.nav-dot { position: relative; flex: 0 0 7px; width: 7px; height: 7px; margin-left: 7px; border-radius: 50%; background: #a4b3bf; transition: transform .2s, background .2s, box-shadow .2s; }
+.section-rail a[aria-current="location"] { color: var(--link); font-weight: 600; }
+.section-rail a[aria-current="location"] .nav-dot { background: var(--link); transform: scale(1.65); box-shadow: 0 0 0 3px #eaf0f5; }
+.section-rail a:hover .nav-dot { background: var(--link); }
+.intro { margin-top: 0; padding: 24px 28px; grid-template-columns: minmax(0, 1fr) 96px; gap: 0 24px; }
+.portrait { width: 96px; height: 96px; }
+h1 { font-size: 30px; }
+.bio { margin-top: 13px; }
+.contact-links { margin-top: 13px; }
+.section { margin-top: 25px; }
+.section-heading { margin-bottom: 10px; }
+.paper { padding: 9px 0; gap: 12px; grid-template-columns: 95px minmax(0, 1fr); }
+.background-grid { gap: 24px; }
+.organization { grid-template-columns: minmax(0, 1fr) 60px; gap: 10px; }
+.organization + .organization { margin-top: 13px; }
+.organization-logo { width: 60px; height: 42px; }
+.logo-mcgill { height: 29px; padding: 5px; }
+.logo-aau img { width: 38px; height: 38px; }
+.project-grid { gap: 10px; }
+.project { padding: 13px; grid-template-columns: minmax(0, 1fr) 100px; gap: 12px; }
+.project .meta { margin-bottom: 4px; }
+.project p { margin-top: 4px; }
+.figure-preview img { height: 75px; }
+.figure-action { padding-block: 4px; font-size: 10px; }
+.section-description { margin-bottom: 12px; }
+footer { margin-top: 25px; padding-top: 13px; }
+@media (max-width: 1050px) and (min-width: 901px) {
+  .project-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 900px) {
+  .page { width: calc(100% - 88px); margin: 44px 24px 24px 64px; }
+  .section-rail { left: 8px; width: 44px; }
+  .section-rail::before { left: 21px; }
+  .section-rail a { width: 44px; }
+  .nav-dot { margin-left: 18px; }
+  .nav-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .section-rail a:hover .nav-label, .section-rail a:focus-visible .nav-label { left: 37px; width: auto; height: auto; overflow: visible; clip-path: none; padding: 5px 9px; border: 1px solid var(--rule); border-radius: 4px; background: white; box-shadow: 0 2px 8px #0001; }
+  .background-grid { gap: 0; }
+  .project { grid-template-columns: minmax(0, 1fr) 100px; }
+}
+@media (max-width: 680px) {
+  .page { width: calc(100% - 64px); margin: 32px 16px 24px 48px; }
+  .section-rail { left: 0; }
+  .intro { padding: 18px; grid-template-columns: minmax(0, 1fr) 62px; gap: 0 12px; }
+  .portrait { width: 62px; height: 62px; }
+  h1 { font-size: 25px; }
+  .paper { grid-template-columns: 1fr; gap: 5px; }
+  .project { grid-template-columns: minmax(0, 1fr) 86px; gap: 10px; padding: 11px; }
+  .figure-preview img { height: 65px; }
+  .figure-action { font-size: 9px; }
+  .figure-action svg { width: 11px; }
+}
+@media (max-width: 380px) {
+  .intro { padding: 15px; grid-template-columns: minmax(0, 1fr) 48px; gap: 0 9px; }
+  .portrait { width: 48px; height: 48px; }
+  h1 { font-size: 23px; }
+  .project { grid-template-columns: minmax(0, 1fr) 74px; }
+  .figure-preview img { height: 56px; }
+  .organization { grid-template-columns: minmax(0, 1fr) 48px; }
+  .organization-logo { width: 48px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+@media print {
+  .section-rail { display: none; }
+  .page { width: 100%; margin: 0; }
+}
