@@ -4,7 +4,7 @@ html { scroll-behavior: smooth; scroll-padding-top: 90px; scrollbar-gutter: stab
 body { margin: 0; background: var(--paper); color: var(--text); font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; -webkit-font-smoothing: antialiased; }
 a { color: var(--link); text-decoration: none; }
 a:hover { text-decoration: underline; text-underline-offset: 4px; }
-a:focus-visible, button:focus-visible { outline: 2px solid var(--link); outline-offset: 5px; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--link); outline-offset: 5px; }
 .skip-link { position: absolute; top: -80px; left: 16px; padding: 8px; background: white; }
 .skip-link:focus { top: 8px; z-index: 30; }
 .site-layout { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 64px; max-width: 1220px; margin: 0 auto; padding: 0 32px; }
@@ -54,17 +54,25 @@ h3 { margin: 0; font-size: 16px; line-height: 1.45; font-weight: 600; }
 .advisor a, .affiliation a { text-decoration: underline; text-decoration-color: #205fa140; text-underline-offset: 3px; }
 .section-description { margin: -12px 0 24px; color: var(--muted); font-size: 14px; }
 .project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 32px; }
-.project { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; min-width: 0; padding-top: 17px; border-top: 1px solid var(--rule); }
+.project { display: grid; grid-template-columns: minmax(0, 1fr) 112px; align-items: start; gap: 32px; min-width: 0; padding-top: 17px; border-top: 1px solid var(--rule); }
 .project-copy { min-width: 0; }
 .project p { font-size: 13px; color: var(--muted); margin: 5px 0 0; line-height: 1.5; }
 .project .meta { font-size: 12px; margin: 0 0 5px; }
 .project h3 { font-size: 15px; }
-.figure-preview { order: -1; display: block; width: 160px; max-width: 100%; height: 100px; margin: 0; padding: 0; border: 0; background: none; cursor: pointer; position: relative; }
-.figure-preview img { display: block; width: 100%; height: 100%; object-fit: contain; mix-blend-mode: multiply; transform-origin: left center; transition: transform .2s; }
-/* Fixed layout footprint; visual growth is capped at 118% (189px on desktop). */
-.figure-preview[aria-pressed="true"] img { transform: scale(1.18); }
-@media (hover: hover) and (pointer: fine) { .figure-preview:hover img { transform: scale(1.18); } }
-.has-figure .figure-preview img { mix-blend-mode: normal; }
+.figure-preview { display: block; width: 112px; max-width: 100%; margin: 22px 0 0; padding: 0; border: 0; background: none; color: var(--muted); cursor: pointer; position: relative; }
+.figure-preview img { display: block; width: 100%; height: 84px; object-fit: contain; padding: 3px; border: 1px solid #e2e6e8; border-radius: 2px; background: white; transform-origin: right center; transition: transform .2s, box-shadow .2s; }
+.figure-label { display: block; margin-top: 8px; font-size: 10px; line-height: 1.3; letter-spacing: .015em; text-align: right; }
+/* 112px previews grow to at most 140px, within the reserved 32px gutter. */
+.figure-preview[aria-pressed="true"] img { transform: scale(1.25); box-shadow: 0 3px 12px #29332f14; }
+@media (hover: hover) and (pointer: fine) { .figure-preview:hover img { transform: scale(1.25); box-shadow: 0 3px 12px #29332f14; } }
+.more-projects { margin-top: 26px; border-top: 1px solid var(--rule); }
+.more-projects summary { display: flex; align-items: center; gap: 10px; min-height: 48px; padding: 12px 0; list-style: none; cursor: pointer; color: var(--link); font-size: 14px; font-weight: 500; }
+.more-projects summary::-webkit-details-marker { display: none; }
+.more-projects summary::before { content: ""; width: 7px; height: 7px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(-45deg); transition: transform .2s; margin-right: 3px; }
+.more-projects[open] summary::before { transform: rotate(45deg); }
+.more-count { margin-left: auto; font-size: 12px; font-weight: 400; color: var(--muted); }
+.additional-projects { padding-top: 8px; }
+.additional-projects .project { display: block; }
 .background-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; }
 .organization { display: grid; grid-template-columns: minmax(0, 1fr) 42px; gap: 10px; align-items: start; }
 .organization + .organization { margin-top: 22px; }

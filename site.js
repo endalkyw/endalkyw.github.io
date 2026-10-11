@@ -30,6 +30,18 @@
   window.addEventListener('pageshow', scheduleSectionUpdate);
   updateCurrentSection();
 
+  const moreProjects = document.querySelector('.more-projects');
+  moreProjects.addEventListener('toggle', scheduleSectionUpdate);
+  function revealLinkedProject() {
+    const target = document.getElementById(window.location.hash.slice(1));
+    if (target && moreProjects.contains(target)) {
+      moreProjects.open = true;
+      target.scrollIntoView({ block: 'start' });
+    }
+  }
+  window.addEventListener('hashchange', revealLinkedProject);
+  revealLinkedProject();
+
   const previews = [...document.querySelectorAll('.figure-preview')];
   function resetPreviews(except) {
     previews.forEach(preview => {

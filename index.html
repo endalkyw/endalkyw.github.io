@@ -7,8 +7,8 @@
   <meta name="theme-color" content="#fafaf8">
   <title>Endalk Y. Gebru — Circuit Design &amp; Automation</title>
   <link rel="icon" href="images/avatar.png" type="image/png">
-  <link rel="stylesheet" href="main.css?v=20261010-coursework">
-  <script src="site.js?v=20261010-inline4" defer></script>
+  <link rel="stylesheet" href="main.css?v=20261010-compact-projects">
+  <script src="site.js?v=20261010-compact-projects" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
@@ -101,7 +101,7 @@
       </section>
       <section id="projects" class="section" aria-labelledby="projects-title">
         <div class="section-heading"><h2 id="projects-title">Projects</h2><span class="section-note">11 projects</span></div>
-        <p class="section-description">Circuit design, physical design, and machine learning. Hover or tap a figure for a closer look; additional figures are coming soon.</p>
+        <p class="section-description">Circuit design, physical design, and machine learning. Hover or tap a figure for a closer look.</p>
         <div class="project-grid">
           <article class="project has-figure" id="project-chiplet-gpt2">
             <div class="project-copy">
@@ -111,6 +111,7 @@
             </div>
             <button class="figure-preview" type="button" aria-label="Expand preview in place: Sensitivity-Guided Hierarchical Optimization for Chiplet-Based GPT-2 Mapping" aria-pressed="false">
               <img src="images/projects/hisim-clean.svg" alt="Chiplet optimization scenarios and the HISIM design-space cost–latency plot." width="1478" height="910" loading="lazy">
+            <span class="figure-label" aria-hidden="true">HISIM 2.0</span>
             </button>
           </article>
           <article class="project has-figure" id="project-rf-pa-lna">
@@ -121,6 +122,7 @@
             </div>
             <button class="figure-preview" type="button" aria-label="Expand preview in place: 94 GHz PA and LNA design" aria-pressed="false">
               <img src="images/projects/sources/94GHz.png" alt="94 GHz RF design: load-pull results, power-added efficiency, delivered power, and gain contours." width="1274" height="678" loading="lazy">
+            <span class="figure-label" aria-hidden="true">Load-pull analysis</span>
             </button>
           </article>
           <article class="project has-figure" id="project-diffusion-ood">
@@ -131,6 +133,7 @@
             </div>
             <button class="figure-preview" type="button" aria-label="Expand preview in place: Diffusion models for out-of-distribution inference" aria-pressed="false">
               <img src="images/projects/diffusion-ood-illustration.png" alt="Conceptual overview of diffusion models: training samples, out-of-distribution inputs, and iterative denoising." width="1672" height="941" loading="lazy">
+            <span class="figure-label" aria-hidden="true">Diffusion model</span>
             </button>
           </article>
           <article class="project has-figure" id="project-roic-layout">
@@ -141,6 +144,7 @@
             </div>
             <button class="figure-preview" type="button" aria-label="Expand preview in place: CMOS readout IC layout automation" aria-pressed="false">
               <img src="images/projects/sources/nanohmics.png" alt="Nanohmics readout circuit layout and corresponding schematic." width="1868" height="792" loading="lazy">
+            <span class="figure-label" aria-hidden="true">Layout &amp; schematic</span>
             </button>
           </article>
           <article class="project has-figure" id="project-logic-locking">
@@ -151,6 +155,7 @@
             </div>
             <button class="figure-preview" type="button" aria-label="Expand preview in place: Logic locking for hardware security" aria-pressed="false">
               <img src="images/projects/logic-locking-figures.svg" alt="Unlocked circuit on the left and locked circuit on the right; circuit graphs above and output waveforms below." width="1200" height="1100" loading="lazy">
+            <span class="figure-label" aria-hidden="true">Logic locking</span>
             </button>
           </article>
           <article class="project has-figure" id="project-biquad-filter">
@@ -161,17 +166,19 @@
             </div>
             <button class="figure-preview" type="button" aria-label="Expand preview in place: Fully differential CMOS biquad filter" aria-pressed="false">
               <img src="images/projects/biquad-filter-figures.svg" alt="Biquad filter circuit and fully differential OTA on the left, with slow-corner transient and spectral responses on the right." width="2600" height="1530" loading="lazy">
+            <span class="figure-label" aria-hidden="true">Circuit &amp; response</span>
             </button>
           </article>
+        </div>
+        <details class="more-projects">
+          <summary>More projects <span class="more-count">5 additional projects</span></summary>
+          <div class="project-grid additional-projects">
           <article class="project" id="project-static-timing">
             <div class="project-copy">
               <p class="meta">2023 · EDA</p>
               <h3>Static timing analysis</h3>
               <p>Built a C++ framework using NLDM timing models to compute circuit delays, slack, and critical paths.</p>
             </div>
-            <button class="figure-preview" type="button" aria-label="Expand preview in place: Static timing analysis" aria-pressed="false">
-              <img src="images/projects/static-timing.svg" alt="Timing analysis — figure coming soon" width="800" height="600">
-            </button>
           </article>
           <article class="project" id="project-fastplace">
             <div class="project-copy">
@@ -179,9 +186,6 @@
               <h3>FastPlace placement framework</h3>
               <p>Built a placement framework implementing the FastPlace algorithm and tested it on IBM benchmark circuits.</p>
             </div>
-            <button class="figure-preview" type="button" aria-label="Expand preview in place: FastPlace placement framework" aria-pressed="false">
-              <img src="images/projects/fastplace.svg" alt="Circuit placement — figure coming soon" width="800" height="600">
-            </button>
           </article>
           <article class="project" id="project-floorplanning">
             <div class="project-copy">
@@ -189,9 +193,6 @@
               <h3>Simulated annealing-based floorplanning</h3>
               <p>Built a floorplanning framework using simulated annealing to optimize layout area and interconnect wire length.</p>
             </div>
-            <button class="figure-preview" type="button" aria-label="Expand preview in place: Simulated annealing-based floorplanning" aria-pressed="false">
-              <img src="images/projects/floorplanning.svg" alt="Floorplanning — figure coming soon" width="800" height="600">
-            </button>
           </article>
           <article class="project" id="project-visible-light">
             <div class="project-copy">
@@ -199,9 +200,6 @@
               <h3>Long-range visible light communication</h3>
               <p>Undergraduate thesis on the design and implementation of a long-range visible light communication system.</p>
             </div>
-            <button class="figure-preview" type="button" aria-label="Expand preview in place: Long-range visible light communication" aria-pressed="false">
-              <img src="images/projects/visible-light.svg" alt="Optical communication — figure coming soon" width="800" height="600">
-            </button>
           </article>
           <article class="project" id="project-microprocessor">
             <div class="project-copy">
@@ -209,11 +207,9 @@
               <h3>14-bit general-purpose microprocessor</h3>
               <p>Designed an 18-instruction microprocessor with microprogrammed control and implemented it in Proteus.</p>
             </div>
-            <button class="figure-preview" type="button" aria-label="Expand preview in place: 14-bit general-purpose microprocessor" aria-pressed="false">
-              <img src="images/projects/microprocessor.svg" alt="Microprocessor design — figure coming soon" width="800" height="600">
-            </button>
           </article>
-        </div>
+          </div>
+        </details>
       </section>
       <div class="background-grid section-block" id="background">
         <section id="education" class="section" aria-labelledby="education-title">
