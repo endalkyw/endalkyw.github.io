@@ -11,6 +11,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 .profile { align-self: start; position: sticky; top: 78px; padding-top: 4px; margin-top: 78px; transform: translateZ(0); }
 .portrait-link { display: inline-block; }
 .portrait { display: block; width: 142px; height: 142px; border-radius: 50%; mix-blend-mode: multiply; }
+.portrait[src*="profile-photo"] { object-fit: contain; object-position: 50% 50%; background: #c7c4bd; mix-blend-mode: normal; }
 h1 { font-size: 24px; line-height: 1.2; letter-spacing: -.035em; font-weight: 600; margin: 22px 0 7px; }
 .profile-role { margin: 0; font-size: 15px; }
 .affiliation { margin: 3px 0 0; font-size: 15px; color: var(--muted); }
